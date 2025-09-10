@@ -9,11 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DEA',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        appBarTheme: const AppBarTheme(elevation: 2),
-        colorSchemeSeed: Colors.green,
-      ),
+      theme: ThemeData(primarySwatch: Colors.green),
+      darkTheme: ThemeData(primarySwatch: Colors.grey),
+      color: Colors.amberAccent,
       home: MyHomePage(title: 'Deterministischer Endlicher Automat'),
     );
   }
@@ -71,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(widget.title), backgroundColor: Colors.green),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
